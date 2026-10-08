@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-navy: #14284b;
+  --color-gold: #b8963e;
+  --color-page: #f5f6fa;
+  --color-soft: #f3f5f9;
+  --color-input: #fbfcfe;
+  --color-track: #e8ebf2;
+  --color-line: #e2e6ee;
+  --color-muted: #5b6475;
+  --color-ok: #1e7a4c;
+  --color-ok-bg: #e6f3ec;
+  --color-warn: #9a5b00;
+  --color-warn-bg: #fdf1dc;
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+body {
+  background: var(--color-page);
+  color: #1f2937;
+  font-family: var(--font-sans);
+}
+
+/* Tailwind v4 deja los botones con el cursor por defecto */
+button:not(:disabled),
+[role="button"],
+summary,
+input[type="range"] {
+  cursor: pointer;
+}
+
+button:disabled,
+[aria-disabled="true"] {
+  cursor: not-allowed;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
